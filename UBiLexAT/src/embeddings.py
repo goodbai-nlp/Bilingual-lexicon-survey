@@ -10,11 +10,11 @@ class WordEmbeddings(object):
 		self.total_count = 0
 		self.words = []
 		self.embedding_dim = 0
-		self.vectors = np.zeros((0, 0))
-		self.transformed_vectors = np.zeros((0, 0))
-		self.counts = np.zeros(0, dtype=int)
-		self.probs = np.zeros(0)
-		self.word_dict = dict([])
+		self.vectors = np.zeros((0, 0))                  #词向量矩阵
+		self.transformed_vectors = np.zeros((0, 0))		 #转置矩阵
+		self.counts = np.zeros(0, dtype=int)			 #词频计数		
+		self.probs = np.zeros(0)                         #概率		word -> prob
+		self.word_dict = dict([])						 #词典对应  word -> number
 
 	def load_from_word2vec(self, dataDir, lang):
 		vocab_file = dataDir + 'vocab-freq.' + lang
