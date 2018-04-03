@@ -1,6 +1,9 @@
 ## facebook 中英抽词典任务复现
 ---
 run.sh 用于调参
+## 环境需要
++ pytorch gpu 0.3
++ faiss 
 ## 可调的参数
 + torch.cuda.set_device(3) #记得设置gpu
 + --map_beta 正则化系数, 可tune范围 {0.01 0.001 0.0001 0.00001}
